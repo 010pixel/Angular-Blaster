@@ -1,0 +1,34 @@
+<div ng-show="domainCtrl.processing">
+  Loading..
+</div>
+<div ng-show="!domainCtrl.processing" ng-init="domainCtrl.init();">
+  <div class="container">
+
+    <h1>Domains</h1>
+
+<div class="relative-position">
+<a ui-sref="domain-add">
+<button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored material-add-btn">
+  <i class="material-icons">add</i>
+</button>
+</a>
+</div>
+
+<table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp" ng-init="domainCtrl.getAllData();">
+  <thead>
+    <tr>
+      <th class="mdl-data-table__cell--non-numeric">Material</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="(k, d) in domainCtrl.data">
+      <td class="mdl-data-table__cell--non-numeric">{{d.name}}</td>
+      <td><a ui-sref="domain-edit({itemId: k})">edit</a></td>
+      <td><a ng-click="domainCtrl.deleteData(k)">delete</a></td>
+    </tr>
+  </tbody>
+</table>
+  </div>
+</div>

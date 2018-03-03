@@ -1,0 +1,21 @@
+//
+// Variables
+//***********************************************************************/
+
+	$screen-mobile: 480px !default; // extra small */
+	$screen-above-mobile: $screen-mobile + 1;
+
+	$screen-tablet: 768px !default; // small */
+	$screen-above-tablet: $screen-tablet + 1;
+
+	$screen-laptop: 1024px !default; // medium */
+	$screen-above-laptop: $screen-laptop + 1;
+
+	$screen-desktop: 1300px !default; // large */
+	$screen-above-desktop: $screen-desktop + 1;
+
+	$screen-large: 1600px !default; // large */
+	$screen-above-large: $screen-large + 1;
+
+	$screen-imac: 1920px !default; // large */
+	$screen-above-imac: $screen-imac + 1;

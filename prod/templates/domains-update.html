@@ -1,0 +1,70 @@
+<div ng-show="domainCtrl.processing">
+  Loading..
+</div>
+<div ng-show="!domainCtrl.processing" ng-init="domainCtrl.init();">
+  <div class="container">
+
+    <h1>Domains Update</h1>
+
+	<form ng-submit="domainCtrl.update();" ng-init="domainCtrl.prepareAddFormFields();">
+		<button type="button""><a ui-sref="domains">Cancel</a></button>
+		<button type="submit">Save</button>
+
+		<div>
+			<span>Type:</span>
+			<select ng-model="domainCtrl.f_new.type">
+				<option value="domain">Domain</option>
+				<option value="subdomain">Sub Domain</option>
+				<option value="hosting">Hosting</option>
+			</select>
+			<div class="error" ng-if="domainCtrl.f_errors.type">Error</div>
+		</div>
+
+		<div ng-if="domainCtrl.f_new.type == 'domain' || domainCtrl.f_new.type == 'subdomain' || domainCtrl.f_new.type == 'hosting'">
+			<span>Name:</span> <input type="text" ng-model="domainCtrl.f_new.name">
+			<div class="error" ng-if="domainCtrl.f_errors.name">Error</div>
+		</div>
+		<div class="domains" ng-if="domainCtrl.f_new.type == 'domain' || domainCtrl.f_new.type == 'hosting'">
+			<div><span>Register Date:</span> <input type="text" ng-model="domainCtrl.f_new.register_date"></div>
+				<div class="error" ng-if="domainCtrl.f_errors.register_date">Error</div>
+			<div><span>Renewal Date:</span> <input type="text" ng-model="domainCtrl.f_new.renewal_date"></div>
+				<div class="error" ng-if="domainCtrl.f_errors.renewal_date">Error</div>
+			<div><span>Expiry Date:</span> <input type="text" ng-model="domainCtrl.f_new.expiry_date"></div>
+				<div class="error" ng-if="domainCtrl.f_errors.expiry_date">Error</div>
+			<div><span>Registerar:</span> <input type="text" ng-model="domainCtrl.f_new.registrar"></div>
+				<div class="error" ng-if="domainCtrl.f_errors.registrar">Error</div>
+			<div><span>Registered By:</span> <input type="text" ng-model="domainCtrl.f_new.registered_by"></div>
+				<div class="error" ng-if="domainCtrl.f_errors.registered_by">Error</div>
+			<div><span>Managed By:</span> <input type="text" ng-model="domainCtrl.f_new.managed_by"></div>
+				<div class="error" ng-if="domainCtrl.f_errors.managed_by">Error</div>
+			<div><span>Registered Email:</span> <input type="text" ng-model="domainCtrl.f_new.registered_email"></div>
+				<div class="error" ng-if="domainCtrl.f_errors.registered_email">Error</div>
+			<div><span>Login Email:</span> <input type="text" ng-model="domainCtrl.f_new.login_email"></div>
+				<div class="error" ng-if="domainCtrl.f_errors.login_email">Error</div>
+			<div><span>Login Userid:</span> <input type="text" ng-model="domainCtrl.f_new.login_userid"></div>
+				<div class="error" ng-if="domainCtrl.f_errors.login_userid">Error</div>
+		</div>
+
+		<div ng-if="domainCtrl.f_new.type == 'domain'">
+			<div><span>Current Registerar:</span> <input type="text" ng-model="domainCtrl.f_new.current_registrar"></div>
+				<div class="error" ng-if="domainCtrl.f_errors.current_registrar">Error</div>
+			<div><span>Nameserver1:</span> <input type="text" ng-model="domainCtrl.f_new.nameserver1"></div>
+				<div class="error" ng-if="domainCtrl.f_errors.nameserver1">Error</div>
+			<div><span>Nameserver2:</span> <input type="text" ng-model="domainCtrl.f_new.nameserver2"></div>
+				<div class="error" ng-if="domainCtrl.f_errors.nameserver2">Error</div>
+			<div><span>Nameserver3:</span> <input type="text" ng-model="domainCtrl.f_new.nameserver3"></div>
+				<div class="error" ng-if="domainCtrl.f_errors.nameserver3">Error</div>
+			<div><span>Nameserver4:</span> <input type="text" ng-model="domainCtrl.f_new.nameserver4"></div>
+				<div class="error" ng-if="domainCtrl.f_errors.nameserver4">Error</div>
+		</div>
+		<div ng-if="domainCtrl.f_new.type == 'subdomain' || domainCtrl.f_new.type == 'domain'">
+			<div><span>Hosted at:</span> <input type="text" ng-model="domainCtrl.f_new.hosted_at"></div>
+				<div class="error" ng-if="domainCtrl.f_errors.hosted_at">Error</div>
+			<div><span>Pointing to:</span> <input type="text" ng-model="domainCtrl.f_new.pointing_to"></div>
+				<div class="error" ng-if="domainCtrl.f_errors.pointing_to">Error</div>
+		</div>
+
+	</form>
+
+  </div>
+</div>

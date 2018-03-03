@@ -1,0 +1,47 @@
+.game-icon {
+
+	&.myplayer {
+		svg {
+			fill: #4caf4f;
+		}
+	}
+
+	&.monster {
+		svg {
+			fill: #f00;
+		}
+	}
+
+	svg {
+		width: 100px;
+		height: 100px;
+	}
+}
+
+.progress-bar {
+	height: 20px;
+	background: #eee;
+	width: 80%;
+	margin: 0 auto;
+	position: relative;
+
+	.progress-percentage {
+		line-height: 20px;
+		font-weight: bold;
+		color: #fff;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	.progress {
+		height: 100%;
+		max-width: 100%;
+		background-color: #3f51b5;
+
+		&.negative {
+			background-color: #3f51b5;
+		}
+	}
+}

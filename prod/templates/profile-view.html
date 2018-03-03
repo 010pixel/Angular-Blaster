@@ -1,0 +1,22 @@
+<h1>Profile View</h1>
+
+<div ng-if="!profCtrl.user"><loading-message type="my_profile_loading"></loading-message></div>
+<div ng-if="profCtrl.user">
+
+	<div><button ng-click="profCtrl.mode('edit');">Edit</button></div>
+
+	<div><img ng-src="{{profCtrl.user.public.photoURL}}" /></div>
+	<div ng-repeat="img in profCtrl.user.public.images"><img ng-src="{{img.thumb}}" /></div>
+
+	<div>Name: {{profCtrl.user.public.displayName}}</div>
+	<br />
+	<div>Creation date: {{profCtrl.user.profile_creation}} ({{profCtrl.user.profile_creation | timeago}})</div>
+	<div>Last Login date: {{profCtrl.user.last_login}} ({{profCtrl.user.last_login | timeago}})</div>
+	<div>Last Online: {{profCtrl.user.last_online}} ({{profCtrl.user.last_online | timeago}})</div>
+	<br />
+	<div>Social Media:</div>
+	<div ng-repeat="(sm_key, sm) in profCtrl.pf.socialMedia" ng-if="profCtrl.user.public.social_media[sm_key]">
+		<span>{{sm}}</span>: {{profCtrl.user.public.social_media[sm_key]}}
+	</div>
+
+</div>
