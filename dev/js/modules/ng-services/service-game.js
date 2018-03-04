@@ -139,8 +139,14 @@
 		 */
 		function init() {
 			var gameSettings = getSettings() || {};
-			players = gameSettings['players'] || {};
-			playersHistory = gameSettings['playersHistory'] || {};
+			players = gameSettings['players'] || {
+				user: 100,
+				dragon: 100
+			};
+			playersHistory = gameSettings['playersHistory'] || {
+				user: [],
+				dragon: []
+			};
 		}
 
 		/**
