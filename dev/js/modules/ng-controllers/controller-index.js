@@ -225,6 +225,8 @@
 		 * @params: {object}  `commentary` containing commentary type, points and attacker+defender information
 		 */
 		function addCommentary (commentary) {
+			commentary['user_points'] = vm.getPoints('user');
+			commentary['dragon_points'] = vm.getPoints('dragon');
 			vm.commentaries.push(commentary);
 		}
 
@@ -256,9 +258,6 @@
 				commentary['winner_points'] = players['user'];
 				commentary['loser_points'] = players['dragon'];
 			}
-
-			commentary['user_points'] = vm.getPoints('user');
-			commentary['dragon_points'] = vm.getPoints('dragon');
 
 			// Add commentary for game over
 			addCommentary(commentary);
