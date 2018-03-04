@@ -1,0 +1,9 @@
+	<div ng-show="!indexCtrl.gameIsOn" class="mdl-typography--text-center">
+		<h1>Game Over</h1>
+		<h4>
+			{{ indexCtrl.lastCommentary['winner'] }} won {{ indexCtrl.lastCommentary['loser'] }} by {{ indexCtrl.lastCommentary['winner_points'] - indexCtrl.lastCommentary['loser_points'] }}
+		</h4>
+		<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" ng-click="indexCtrl.rematch();">
+				Re-Match
+			</button>
+	</div>

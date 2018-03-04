@@ -1,0 +1,61 @@
+	<div class="mdl-grid">
+
+		<div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-tablet mdl-cell--6-col-desktop mdl-typography--text-center">
+			<h4>You</h2>
+			<div class="game-icon myplayer">
+				<div
+					class="bullet"
+					ng-class="{ 'animated': indexCtrl.turn == 'user' }"
+					ng-if="indexCtrl.gameIsOn"
+				>
+					<div class="points">{{indexCtrl.attackValue}}</div>
+					<img src="images/fire.svg" />
+				</div>
+				<img class="player_icon" src="images/user.svg">
+			</div>
+			<div class="history">
+				<span ng-repeat="history in indexCtrl.getHistory('user') track by $index">
+					{{ history.value < 0 ? ' - ' + (-history.value) : '+' + history.value }} ({{history.type}})
+				</span>
+			</div>
+		</div>
+
+		<div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-tablet mdl-cell--6-col-desktop mdl-typography--text-center">
+			<h4>Dragon</h2>
+			<div class="game-icon monster">
+				<div
+					class="bullet right"
+					ng-class="{ 'animated': indexCtrl.turn == 'dragon' }"
+					ng-if="indexCtrl.gameIsOn"
+				>
+					<div class="points">{{indexCtrl.attackValue}}</div>
+					<img src="images/fire.svg" />
+				</div>
+				<img class="player_icon" src="images/dragon.svg">
+			</div>
+			<div class="history">
+				<span ng-repeat="history in indexCtrl.getHistory('dragon') track by $index">
+					{{ history.value < 0 ? ' - ' + (-history.value) : '+' + history.value }} ({{history.type}})
+				</span>
+			</div>
+		</div>
+
+		<div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-tablet mdl-cell--6-col-desktop mdl-typography--text-center">
+			<div class="progress-bar"
+					ng-class="{'negative': indexCtrl.getPoints('user') <= 40, 'low': indexCtrl.getPoints('user') <= 55}"
+				>
+				<div class="progress-percentage">{{ indexCtrl.getPoints('user') }}%</div>
+				<div class="progress" style="width: {{ indexCtrl.getPoints('user') }}%;"></div>
+			</div>
+		</div>
+
+		<div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-tablet mdl-cell--6-col-desktop mdl-typography--text-center">
+			<div class="progress-bar"
+					ng-class="{'negative': indexCtrl.getPoints('dragon') <= 40, 'low': indexCtrl.getPoints('dragon') <= 55}"
+				>
+				<div class="progress-percentage">{{ indexCtrl.getPoints('dragon') }}%</div>
+				<div class="progress" style="width: {{ indexCtrl.getPoints('dragon') }}%;"></div>
+			</div>
+		</div>
+
+	</div>

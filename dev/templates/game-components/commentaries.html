@@ -1,0 +1,39 @@
+	<div class="mdl-grid commentary-wrapper">
+
+		<div class="mdl-cell mdl-cell--12-col mdl-typography--text-center">
+			<h4>Game Commentary</h4>
+		</div>
+
+		<div class="mdl-cell mdl-cell--12-col mdl-typography--text-center">
+
+			<div class="commentary-box" ng-if="indexCtrl.commentaries.length">
+
+				<div ng-show=" indexCtrl.process != '' ">
+					<i class="fa fa-spinner fa-spin"></i>
+				</div>
+
+				<div ng-repeat="commentary in indexCtrl.commentaries | reverse track by $index" class="msg">
+
+					<div ng-if="commentary.type == 'statement'">
+						{{ commentary['value'] }}
+					</div>
+
+					<div ng-if=" ['attack', 'blast', 'heal'].indexOf(commentary.type) !== -1 ">
+						{{ commentary['attacker'] }} {{commentary.type}}s {{ commentary['defender'] }} for {{ commentary['points'] }}
+						<br />
+						You: {{ commentary['user_points'] }}
+						<br />
+						Dragon: {{ commentary['dragon_points'] }}
+					</div>
+
+					<div ng-if="commentary.type == 'gameover'">
+						{{ commentary['winner'] }} won by {{ commentary['winner_points'] - commentary['loser_points'] }}
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>

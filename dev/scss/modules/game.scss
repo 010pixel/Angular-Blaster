@@ -1,20 +1,50 @@
 .game-icon {
 
-	&.myplayer {
-		svg {
-			fill: #4caf4f;
-		}
-	}
+	position: relative;
 
-	&.monster {
-		svg {
-			fill: #f00;
-		}
-	}
-
-	svg {
+	.player_icon {
 		width: 100px;
 		height: 100px;
+	}
+
+	.bullet {
+		position: absolute;
+		top: 60%;
+		left: 50%;
+		opacity: 0;
+		transform: translate(-50%, -50%);
+		transition: all 0s linear;
+
+		&.animated {
+			left: 150%;
+			opacity: 1;
+			transition: all 1s linear;
+		}
+
+		.points {
+			background-color: #333;
+			color: #fff;
+			padding: 5px 0;
+			border-radius: 50%;
+		}
+
+		img {
+			width: 64px;
+			height: 64px;
+			transform: rotate(90deg);
+		}
+
+		&.right{
+			top: 40%;
+
+			&.animated {
+				left: -50%;
+			}
+
+			img {
+				transform: rotate(-90deg);
+			}
+		}
 	}
 }
 
@@ -24,6 +54,7 @@
 	width: 80%;
 	margin: 0 auto;
 	position: relative;
+	border: 2px solid #236760;
 
 	.progress-percentage {
 		line-height: 20px;
@@ -38,10 +69,44 @@
 	.progress {
 		height: 100%;
 		max-width: 100%;
-		background-color: #3f51b5;
+		background-color: #4caf50;
+		transition: all .5s linear;
+	}
 
-		&.negative {
-			background-color: #3f51b5;
+	&.low {
+		.progress-percentage {
+			color: #333;
+		}
+	}
+
+	&.negative {
+		border-color: #bd1010;
+
+		.progress {
+			background-color: #f54336;
+		}
+	}
+}
+
+.commentary-wrapper {
+
+	h4 {
+		margin-bottom: 0;
+	}
+
+	.commentary-box {
+		// max-height: 200px;
+		max-width: 400px;
+		margin: 0 auto;
+		padding: 10px;
+		overflow: scroll;
+
+		.msg {
+			padding: 5px;
+			margin: 5px 0;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			box-shadow: 1px 2px 5px 0px #ddd;
 		}
 	}
 }

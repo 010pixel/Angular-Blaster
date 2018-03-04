@@ -1,7 +1,7 @@
 {
-  "name": "domain-manager",
+  "name": "angular-blaster-game",
   "version": "1.0.0",
-  "description": "Domain Manager",
+  "description": "Angular Blaster Game",
   "main": "index.js",
   "directories": {
     "test": "test"
@@ -10,18 +10,17 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "iDate"
+    "game",
+    "angular",
+    "blaster",
+    "010pixel"
   ],
   "author": "010Pixel",
   "license": "ISC",
   "dependencies": {
     "angular": "^1.5.8",
-    "angular-tooltips": "^1.1.8",
     "angular-ui-router": "^0.4.2",
-    "angularfire": "^2.3.0",
     "compass-mixins": "^0.12.10",
-    "firebase": "^4.0.0",
-    "firebaseui": "^2.0.0",
     "font-awesome": "^4.6.3",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
@@ -36,7 +35,7 @@
     "gulp-sass": "^2.3.2",
     "gulp-uglify": "^2.0.0",
     "jquery": "^3.1.1",
-    "node-font-awesome": "^1.0.2",
-    "psi": "^2.0.4"
+    "jquery-confirm": "^3.3.2",
+    "node-font-awesome": "^1.0.2"
   }
 }

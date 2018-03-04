@@ -1,5 +1,9 @@
 (function (){
 
+	/**
+	 * Factory to do all kinds of alerts, logs, error, warning, confirm popups
+	 */
+
 	'use strict';
 
 	angular
@@ -14,7 +18,7 @@
 
 		// This will be an alert shown to the users
 		returnObj.alert = function ( config ) {
-			return alert(config);
+			$.alert(config);
 		}
 
 		// This will be an alert shown to the users
@@ -40,6 +44,17 @@
 		// This will be a warning logged for developer
 		returnObj.warning = function ( msg ) {
 			return console.warn(msg);
+		}
+
+		// This will be a confirm message with cancel and confirm function callbacks
+		returnObj.confirm = function (title, content, confirmCallback, cancelCallback) {
+			var obj = {};
+				obj['title'] = title;
+				obj['content'] = content;
+				obj['buttons'] = {};
+				if ( confirmCallback ) obj['buttons']['confirm'] = confirmCallback;
+				if ( cancelCallback ) obj['buttons']['cancel'] = cancelCallback;
+			$.confirm(obj);
 		}
 
 		returnObj.log("calling alertFactory");

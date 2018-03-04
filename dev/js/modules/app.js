@@ -1,18 +1,13 @@
 (function(){
 
+	/**
+	 * Create AngularJS App
+	 */
+
 	'use strict';
 
 	angular.module('myApp', [
-		'ui.router',
-		'firebase'
+		'ui.router'
 	]);
 
 })();
-
-function scopeApply(scope) {
-	if (scope 
-		&& scope.$root 
-		&& scope.$root.$$phase != '$apply' 
-		&& scope.$root.$$phase != '$digest')
-			scope.$apply();
-}

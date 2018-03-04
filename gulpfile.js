@@ -20,11 +20,11 @@ var files = {
 	js: {
 		requiredLibraryList: [
 			"node_modules/jquery/dist/jquery.min.js",
+			"node_modules/jquery-confirm/dist/jquery-confirm.min.js",
 			"node_modules/angular/angular.min.js",
 			"node_modules/angular-ui-router/release/angular-ui-router.min.js",
-			"node_modules/firebase/firebase.js",
-			"node_modules/firebaseui/dist/firebaseui.js",
-			"node_modules/angularfire/dist/angularfire.min.js",
+			"node_modules/angular-animate/angular-animate.min.js",
+			"node_modules/material-design-lite/material.min.js",
 		],
 		inputPath: "dev/js/",
 		outputPath: "prod/js"

@@ -1,5 +1,15 @@
-/* Load Styles + Google Fonts */
 (function() {
+	/**
+	 * Load Styles + Google Fonts
+	 *
+	 * @params: {object}  `scope` angular scope which needs to be applied to show latest changes in page
+	 */
+
+	/**
+	 * Load CSS
+	 *
+	 * @params: {string}  `href` url of the css file
+	 */
 	function loadCSS(href){
 		var ss = window.document.createElement('link'),
 		ref = window.document.getElementsByTagName('head')[0];
@@ -18,6 +28,8 @@
 		ss.media = 'all';
 		},0);
 	}
-	loadCSS('https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700');
 	loadCSS('css/styles.css');
+	loadCSS('https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en');
+	loadCSS('https://fonts.googleapis.com/icon?family=Material+Icons');
+	// loadCSS('https://code.getmdl.io/1.3.0/material.min.css');
 })();

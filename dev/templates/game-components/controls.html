@@ -1,0 +1,24 @@
+	<div ng-show="indexCtrl.gameIsOn">
+		<div class="mdl-grid" ng-show=" indexCtrl.process != '' ">
+			<div class="mdl-cell mdl-cell--12-col mdl-typography--text-center">
+				<i class="fa fa-spinner fa-spin"></i> Processing..
+			</div>
+		</div>
+		<div class="mdl-grid" ng-show=" indexCtrl.process == '' ">
+			<div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet mdl-cell--3-col-desktop mdl-typography--text-center">
+				<button
+					class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"
+					ng-click="indexCtrl.attack();"
+				>Attack</button>
+			</div>
+			<div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet mdl-cell--3-col-desktop mdl-typography--text-center">
+				<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" ng-click="indexCtrl.blast();">Blast</button>
+			</div>
+			<div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet mdl-cell--3-col-desktop mdl-typography--text-center">
+				<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" ng-click="indexCtrl.heal();">Heal</button>
+			</div>
+			<div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet mdl-cell--3-col-desktop mdl-typography--text-center">
+				<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" ng-click="indexCtrl.giveup();">Give Up</button>
+			</div>
+		</div>
+	</div>
