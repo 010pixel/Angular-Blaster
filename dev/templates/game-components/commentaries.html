@@ -18,8 +18,16 @@
 						{{ commentary['value'] }}
 					</div>
 
-					<div ng-if=" ['attack', 'blast', 'heal'].indexOf(commentary.type) !== -1 ">
+					<div ng-if=" ['attack', 'blast'].indexOf(commentary.type) !== -1 ">
 						{{ commentary['attacker'] }} {{commentary.type}}s {{ commentary['defender'] }} for {{ commentary['points'] }}
+						<br />
+						You: {{ commentary['user_points'] }}
+						<br />
+						Dragon: {{ commentary['dragon_points'] }}
+					</div>
+
+					<div ng-if=" ['heal'].indexOf(commentary.type) !== -1 ">
+						{{ commentary['attacker'] }} {{commentary.type}} yourself for {{ commentary['points'] }}
 						<br />
 						You: {{ commentary['user_points'] }}
 						<br />
