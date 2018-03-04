@@ -14,7 +14,7 @@ Install necessary node modules
 npm install
 ```
 
-###Generate game
+### Generate game
 
 ```
 gulp
