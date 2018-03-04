@@ -32,7 +32,7 @@ Upload 'prod' folder to server
 
 ## Authors
 
-* **010Pixel** - [website](https://010pixel.com/)
+* **010Pixel** - [website](https://ravigandhi.com/)
 
 ## References:
 * https://github.com/daneden/animate.css
