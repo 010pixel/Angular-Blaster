@@ -1,6 +1,6 @@
 # Angular Blaster Game
 
-A simple game based on AngularJS ([Demo](http://code-dude.com/tests/prod/))
+A simple game based on AngularJS ([Demo](http://code-dude.com/tests/angular-blaster/))
 
 ## Getting Started
 
