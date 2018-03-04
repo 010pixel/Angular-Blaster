@@ -8,6 +8,12 @@ These instructions will help you setup and get the game running
 
 ### Installing
 
+Downloading files
+
+```
+git clone https://github.com/010pixel/Angular-Blaster.git
+```
+
 Install necessary node modules
 
 ```
