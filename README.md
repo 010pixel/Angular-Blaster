@@ -28,7 +28,7 @@ Upload 'prod' folder to server
 
 * [Material Design Lite](https://getmdl.io/)
 * [NodeJS](https://nodejs.org/en/)
-* [AngularJS](https://nodejs.org/en/) - The web framework used
+* [AngularJS](https://angularjs.org/) - The web framework used
 
 ## Authors
 
