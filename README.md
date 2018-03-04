@@ -17,7 +17,7 @@ npm install
 Generate game
 
 ```
-npm install
+gulp
 ```
 
 ## Deployment
