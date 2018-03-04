@@ -93,7 +93,7 @@
 		 * @params: {string}  `from` name of the player who gets healed e.g. user, dragon
 		 * @params: {function}  `callback` function to be run after heal
 		 */
-		function heal (from, callback) {
+		function heal (from, to, callback) {
 			var maxHeal = 100 - (players[from] || 0)
 			var healValue = getRandomNumber(1,maxHeal);
 			players[from] += healValue;
